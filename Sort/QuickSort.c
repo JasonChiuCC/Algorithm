@@ -49,6 +49,8 @@ void QuickSort(int* array, int start, int end)
 {
     /* Pick pivot Loction */
     int pivotLoc    = end;
+    
+    /* Get border */
     int border      = partition(array, start, end, pivotLoc);
     
     //Pivot Left
