@@ -48,19 +48,19 @@ int partition(int* array, int start, int end, int pivotLoc)
 void QuickSort(int* array, int start, int end)
 {
     /* Pick pivot Loction */
-    int pivotLoc = end;
+    int pivotLoc    = end;
+    int border      = partition(array, start, end, pivotLoc);
     
-    if( start < end )
+    //Pivot Left
+    if( start < border-1)
     {
-        int r = partition(array, start, end, pivotLoc);    
-        /* Pivot Left */
-        if( r > start )
-        {
-            QuickSort(array, start, r-1);
-        }
-        
-        /* Pivot Right */
-        QuickSort(array, r+1, end);
+        QuickSort(array, start, border-1);
+    }
+    
+    //Pivot Right
+    if( border+1 < end )
+    {
+        QuickSort(array, border+1, end);
     }
 }
 
