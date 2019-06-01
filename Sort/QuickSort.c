@@ -53,13 +53,13 @@ void QuickSort(int* array, int start, int end)
     /* Get border */
     int border      = partition(array, start, end, pivotLoc);
     
-    //Pivot Left
+    //Border Left to sort
     if( start < border-1)
     {
         QuickSort(array, start, border-1);
     }
     
-    //Pivot Right
+    //Border Right to sort
     if( border+1 < end )
     {
         QuickSort(array, border+1, end);
