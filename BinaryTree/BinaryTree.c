@@ -15,10 +15,6 @@ typedef struct Node
 }Node;
 Node *root = NULL;
 
-// NodeSearch
-// InOrder
-// PostOrder
-
 Node* FindMinNode(Node* node)
 {    
     Node* currNode  = node;
@@ -135,6 +131,24 @@ void PreOrder(Node *node)
     PreOrder(currNode->right);
 }
 
+void InOrder(Node *node)
+{
+    if( node == NULL ) return;    
+    Node* currNode      = node;    
+    InOrder(currNode->left);
+    printf("Node : %d\n", currNode->data);
+    InOrder(currNode->right);
+}
+
+void PostOrder(Node *node)
+{
+    if( node == NULL ) return;    
+    Node* currNode      = node;        
+    PostOrder(currNode->left);    
+    PostOrder(currNode->right);
+    printf("Node : %d\n", currNode->data);        
+}
+
 int main(int argc, char **argv)
 {
 	printf("Binary Tree !!!\n");
@@ -151,7 +165,8 @@ int main(int argc, char **argv)
     NodeAdd(66);
     NodeAdd(64);
     NodeAdd(63);
-    PreOrder(root);
+    //PreOrder(root);
+    PostOrder(root);
     
     NodeDelete(root, 30);
     PreOrder(root);
