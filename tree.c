@@ -30,8 +30,8 @@ void tree(char* name)
 	// Loop Current folder
 	while( (pDir_Entry = readir(pDir_Curr)) != NULL )
 	{
-		if ( strcmp(entry->d_name, ".")  == 0 || 
-		     strcmp(entry->d_name, "..") == 0)
+		if ( strcmp(pDir_Entry->name, ".")  == 0 || 
+		     strcmp(pDir_Entry->name, "..") == 0)
 		{
 		    continue;
 		}
