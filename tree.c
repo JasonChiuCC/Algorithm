@@ -30,11 +30,11 @@ void tree(char* name)
 	// Loop Current folder
 	while( (pDir_Entry = readir(pDir_Curr)) != NULL )
 	{
-        if ( strcmp(entry->d_name, ".")  == 0 || 
-             strcmp(entry->d_name, "..") == 0)
-        {
-            continue;
-        }
+		if ( strcmp(entry->d_name, ".")  == 0 || 
+		     strcmp(entry->d_name, "..") == 0)
+		{
+		    continue;
+		}
    
         // Display Current folder name
         printf(" %s \n", pDir_Entry->name );
