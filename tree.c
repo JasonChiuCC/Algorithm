@@ -21,8 +21,8 @@ struct DIR* readir (struct DIR* dir){...}
 // Example : input = home
 void tree(char* name)
 {
-	struct DIR *pDir_Curr;
-	struct DIR *pDir_Entry;
+	struct DIR *pDir_Curr	= NULL;
+	struct DIR *pDir_Entry	= NULL;
 	
 	// Check
 	if( opendir(name) == NULL ) return;
