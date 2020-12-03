@@ -36,9 +36,9 @@ void tree(char* name)
 		    continue;
 		}
    
-        // Display Current folder name
-        printf(" %s \n", pDir_Entry->name );
-        tree( pDir_Entry->name );
+		// Display Current folder name
+		printf(" %s \n", pDir_Entry->name );
+		tree( pDir_Entry->name );
 	}
 	return;
 }
